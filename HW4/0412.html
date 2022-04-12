@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <title>Mini Game</title> 
+  <style>
+
+  .line{
+      border-left: thick solid rgba(7, 167, 148, 0.6);
+      height: 100%;
+      left: '1500';
+      position: windowouterWidth;
+}
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript"> 
+  var i=0,q=1,l=1;
+  var char=[ ];
+  char[1]="A.PNG";
+  char[2]="B.PNG";
+  char[3]="C.PNG";
+  char[4]="D.PNG";
+  char[5]="E.PNG";
+  char[6]="F.PNG";
+  char[7]="G.PNG";
+  char[8]="H.PNG";
+  char[9]="I.PNG";  
+  char[10]="J.PNG";
+  char[11]="K.PNG";
+  char[12]="L.PNG";
+  char[13]="M.PNG";
+  char[14]="N.PNG";
+  char[15]="O.PNG";
+  char[16]="P.PNG";
+  char[17]="Q.PNG";
+  char[18]="R.PNG";
+  char[19]="S.PNG";
+  char[20]="T.PNG";
+  char[21]="U.PNG";
+  char[22]="V.PNG";
+  char[23]="W.PNG";
+  char[24]="X.PNG";
+  char[25]="Y.PNG";
+  char[26]="Z.PNG";
+  var str1="";
+  function move()
+  {
+    $("#word"+q).animate({
+        left:'1450px'
+    },9000,'linear',animationcomplete)
+    q++;
+  }
+  function animationcomplete()
+  {
+    $("*").empty();
+    alert('Game Over');
+  }
+  function generate1()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an1").prepend("<div id='word" + i +"' style='position:absolute;'> <img src= "+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate2()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an2").prepend("<div id='word" + i +"' style='position:absolute;'> <img src= "+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate3()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an3").prepend("<div id='word" + i +"' style='position:absolute;'> <img src= "+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate4()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an4").prepend("<div id='word" + i +"' style='position:absolute;'> <img src= "+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate5()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an5").prepend("<div id='word" + i +"' style='position:absolute;'> <img src= "+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate6()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an6").prepend("<div id='word" + i +"' style='position:absolute;'> <img src= "+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  $(document).ready(function() 
+  { 
+    $("#btn1").click(function()
+    {
+      setInterval(generate1,1500);
+      setInterval(generate2,1500);
+      setInterval(generate3,1500);
+      setInterval(generate4,1500);
+      setInterval(generate5,1500);
+      setInterval(generate6,1500);
+    });
+  } );
+  $(document).ready(function() 
+  { 
+    $("*").keydown(function(e)
+    {
+     
+      if(e.key==str1.substr(-1))
+      {
+        $("#word"+l).stop();
+        $("#word"+l).remove();
+        l++;
+        str1=str1.substr(0,str1.length-1);
+      }
+      
+
+    });
+  } );
+  </script> 
+</head> 
+<body> 
+<button id="btn1">START</button>
+<div class="line"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an1" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an2" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an3" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an4" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an5" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an6" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+</body> 
+</head> 
+</html>
