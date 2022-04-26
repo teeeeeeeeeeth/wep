@@ -1,0 +1,27 @@
+.head{
+    background-color: #020c56	; 
+    color: aliceblue; 
+    padding: 10px; 
+    font-size: 30px; 
+    text-align: left;
+    font-style: monospace;
+}
+.stationName{
+    font-size: 30px; 
+    text-align: center;
+    padding: 15px;
+    border:5px  #21317b;
+    width: 300px;
+    margin-left: 550px;
+    margin-top: 10px;
+    box-shadow:3px 3px 5px 6px  #10035a;
+    border-radius: 70px;
+}
+#station{
+    text-align: left;
+    margin-left: 620px; 
+    padding-top: 15px;
+    font-size: 25px; 
+    padding-top: 15px;
+}
+}
